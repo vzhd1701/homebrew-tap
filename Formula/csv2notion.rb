@@ -10,6 +10,7 @@ class Csv2notion < Formula
   bottle do
     root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/csv2notion-0.1.3"
     sha256 cellar: :any_skip_relocation, big_sur:      "1ebb5b8f659f1ac96cd70716c0fd50f173227598ebf6fecaab3418206953d5e0"
+    sha256 cellar: :any_skip_relocation, catalina:     "3a07ba65b1106191de92ab87ab396554fdffad1997e28d3f997adc7c9f5474c0"
     sha256 cellar: :any_skip_relocation, x86_64_linux: "22dfccd273fdc0a6b96cd8da29d1cc6ad73d958af90d72cedc5899682873b7d9"
   end
 
