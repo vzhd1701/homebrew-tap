@@ -119,7 +119,7 @@ class Csv2notion < Formula
       1,2,3
     EOF
 
-    output = shell_output("#{bin}/csv2notion --token 123 test.csv 2>&1", result=1)
+    output = shell_output("#{bin}/csv2notion --token 123 test.csv 2>&1", 1)
     assert_match "Invalid Notion token", output
 
     assert_match version.to_s, shell_output("#{bin}/csv2notion --version")
