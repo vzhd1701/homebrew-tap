@@ -138,6 +138,19 @@ class Enex2notion < Formula
   end
 
   def install
+    if OS.linux?
+      pymupdf_dirs = {
+        "include_dirs": [
+            Formula["mupdf"].include/"mupdf",
+            Formula["freetype2"].include/"freetype2"
+          ],
+        "library_dirs": [lib]
+      }
+      (buildpath/"pymupdf_dirs.env").write(pymupdf_dirs.to_json())
+
+      ENV["PYMUPDF_DIRS"] = File.expand_path("pymupdf_dirs.env")
+    end
+
     virtualenv_install_with_resources
   end
 
