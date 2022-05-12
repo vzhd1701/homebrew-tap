@@ -7,6 +7,14 @@ class EvernoteBackup < Formula
   sha256 "645e1f5dbbe93f43ddb1515277b026efab3520111fa31799f104f9e83be916c1"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/evernote-backup-1.8.1"
+    sha256 cellar: :any_skip_relocation, monterey:     "b29b92882c301e894fee7e34f1810b4b913292a9ad4a1b1e34dd83fc2b46f223"
+    sha256 cellar: :any_skip_relocation, big_sur:      "feb816ab7f2aed6441254b8e15ceaf48cddf65b511d53eb1a37bcaa0751ef28d"
+    sha256 cellar: :any_skip_relocation, catalina:     "c50e83988b29c08c25724dcb75f5ca4ad648bcb11bf03b18482d77d4b404f9b5"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "86628e7052c722fdbe66053224831841c88e99e56c9b96f09bb64b7e13182ae8"
+  end
+
   depends_on "python@3.10"
 
   resource "certifi" do
