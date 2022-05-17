@@ -3,8 +3,8 @@ class EvernoteBackup < Formula
 
   desc "Backup & export all Evernote notes and notebooks"
   homepage "https://github.com/vzhd1701/evernote-backup"
-  url "https://files.pythonhosted.org/packages/73/93/94ca3273e861ed306ac314c96115cc62e4441d098f2a8da2845705149670/evernote-backup-1.8.1.tar.gz"
-  sha256 "645e1f5dbbe93f43ddb1515277b026efab3520111fa31799f104f9e83be916c1"
+  url "https://files.pythonhosted.org/packages/8d/8d/e856acd50cf51af0c427558186fbbcf1132faf7813deb62fa24492e2216b/evernote-backup-1.9.0.tar.gz"
+  sha256 "0f07f9674214f7b7fee42871b009684564bf9df079b383dab152ab51a22c6dd3"
   license "MIT"
 
   bottle do
