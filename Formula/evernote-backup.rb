@@ -8,11 +8,11 @@ class EvernoteBackup < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/evernote-backup-1.8.1"
-    sha256 cellar: :any_skip_relocation, monterey:     "b29b92882c301e894fee7e34f1810b4b913292a9ad4a1b1e34dd83fc2b46f223"
-    sha256 cellar: :any_skip_relocation, big_sur:      "feb816ab7f2aed6441254b8e15ceaf48cddf65b511d53eb1a37bcaa0751ef28d"
-    sha256 cellar: :any_skip_relocation, catalina:     "c50e83988b29c08c25724dcb75f5ca4ad648bcb11bf03b18482d77d4b404f9b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "86628e7052c722fdbe66053224831841c88e99e56c9b96f09bb64b7e13182ae8"
+    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/evernote-backup-1.9.0"
+    sha256 cellar: :any_skip_relocation, monterey:     "1c6f384621fc74eebcd8f3c75080057e259b629f6d6a104ebdecf52cbe41bbd9"
+    sha256 cellar: :any_skip_relocation, big_sur:      "642c1a5381e35f36605e49c7d6737c5852e188dc7b84300fb1f943a484ce221f"
+    sha256 cellar: :any_skip_relocation, catalina:     "3396162b7c14d799722abc1dfa2ae2114783cef2d037edbce66a3b2fe239e6e8"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a675512cb46d958f006d3ab8de6cd1fe055a47d880bfd060625d0eb68858e582"
   end
 
   depends_on "python@3.10"
