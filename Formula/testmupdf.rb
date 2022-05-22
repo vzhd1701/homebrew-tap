@@ -8,8 +8,8 @@ class Testmupdf < Formula
   license "MIT"
 
   depends_on "freetype" => :build
-  depends_on "mupdf" => :build
   depends_on "swig" => :build
+  depends_on "mupdf"
   depends_on "python@3.10"
 
   resource "PyMuPDF" do
