@@ -8,8 +8,8 @@ class Enex2notion < Formula
   license "MIT"
 
   depends_on "freetype" => :build
-  depends_on "mupdf" => :build
   depends_on "swig" => :build
+  depends_on "mupdf"
   depends_on "python@3.10"
 
   resource "beautifulsoup4" do
@@ -138,7 +138,7 @@ class Enex2notion < Formula
   end
 
   def install
-    if OS.linux?
+    on_linux do
       pymupdf_dirs = {
         include_dirs: [
           Formula["mupdf"].include/"mupdf",
