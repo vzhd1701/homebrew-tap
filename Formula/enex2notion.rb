@@ -138,7 +138,7 @@ class Enex2notion < Formula
   end
 
   def install
-    on_linux do
+    if OS.linux?
       pymupdf_dirs = {
         include_dirs: [
           Formula["mupdf"].include/"mupdf",
