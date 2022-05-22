@@ -7,6 +7,14 @@ class Enex2notion < Formula
   sha256 "22b6fa39ca2233dd2ea73124b83c376eb9887c9df8d2a2b71fc2decea81f69a4"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/enex2notion-0.2.12"
+    sha256 cellar: :any,                 monterey:     "060376fa0aab9c64bea24ff0869788756171a7cabdf6a04f84265a61f730f45f"
+    sha256 cellar: :any,                 big_sur:      "26af76790fe0f0ee1a23f8b5f73f22225767af5124f09901542f133ae6be8c9f"
+    sha256 cellar: :any,                 catalina:     "6ef252e07098f3e5fcd52a2bdbb1e28d7d929ecd9720ff964e6edb040cf90784"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ef43551e6503caa3b853c440313b4ca074e795ed91ce95b0ba9561c32ce574e9"
+  end
+
   depends_on "freetype" => :build
   depends_on "swig" => :build
   depends_on "mupdf"
