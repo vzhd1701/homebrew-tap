@@ -1,4 +1,5 @@
-# Vzhd1701 Tap
+# vzhd1701 Tap
+![GitHub all releases](https://img.shields.io/github/downloads/vzhd1701/homebrew-tap/total?label=poured%20from%20this%20tap)
 
 ## How do I install these formulae?
 
