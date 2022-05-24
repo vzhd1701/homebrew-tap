@@ -3,8 +3,8 @@ class Csv2notion < Formula
 
   desc "Import/Merge CSV files into Notion database"
   homepage "https://github.com/vzhd1701/csv2notion"
-  url "https://files.pythonhosted.org/packages/c2/65/084267930ce9c887b2e2f331a07d3bef3ed7f9112799e4ccafe5ecf471b1/csv2notion-0.1.3.tar.gz"
-  sha256 "0a33090793da5e3d6bd44a8395dbf3dfb7dded01742f1da7542b558c4271f85e"
+  url "https://files.pythonhosted.org/packages/3f/dd/d42741e997da64c6987b60ef07ed4299f1e2f16853b2b7e5a2963e212950/csv2notion-0.2.0.tar.gz"
+  sha256 "d971df6326c90a44787a56b5037a1320cb1905eb80b6e9268b8837c95de5afb1"
   license "MIT"
 
   bottle do
@@ -32,8 +32,8 @@ class Csv2notion < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/6c/ae/d26450834f0acc9e3d1f74508da6df1551ceab6c2ce0766a593362d6d57f/certifi-2021.10.8.tar.gz"
-    sha256 "78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"
+    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
+    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
   end
 
   resource "charset-normalizer" do
@@ -59,6 +59,11 @@ class Csv2notion < Formula
   resource "idna" do
     url "https://files.pythonhosted.org/packages/62/08/e3fc7c8161090f742f504f40b1bccbfc544d4a4e09eb774bf40aafce5436/idna-3.3.tar.gz"
     sha256 "9d643ff0a55b762d5cdb124b8eaa99c66322e2157b69160bc32796e824360e6d"
+  end
+
+  resource "notion-vzhd1701-fork" do
+    url "https://files.pythonhosted.org/packages/fb/08/ecef29696b86725c51b765043567b8875af3ea6297e5444ec72a205c2671/notion-vzhd1701-fork-0.0.33.tar.gz"
+    sha256 "e1762688259bd010752bceda29dfdc15ae25cc7346eb0ddabd86208e36dfbc3e"
   end
 
   resource "python-dateutil" do
@@ -99,6 +104,26 @@ class Csv2notion < Formula
   resource "tqdm" do
     url "https://files.pythonhosted.org/packages/98/2a/838de32e09bd511cf69fe4ae13ffc748ac143449bfc24bb3fd172d53a84f/tqdm-4.64.0.tar.gz"
     sha256 "40be55d30e200777a307a7585aee69e4eabb46b4ec6a4b4a5f2d9f11e7d5408d"
+  end
+
+  resource "types-emoji" do
+    url "https://files.pythonhosted.org/packages/00/4d/3966fd0c7f4a8b24f9fdb7502115ec17b39c47b66131e3f9f1f0385deea1/types-emoji-1.7.0.tar.gz"
+    sha256 "bfdf677bed34537117a7d43687b09a01b808e4d838872f7628c6dc4d8a64131e"
+  end
+
+  resource "types-python-dateutil" do
+    url "https://files.pythonhosted.org/packages/28/cd/2f094758ff9ee4ad820fc20b37e89908c0ff9fd541d066c1afa5a47acf2e/types-python-dateutil-2.8.16.tar.gz"
+    sha256 "3aaac4c138eb6b8ecbc2550996ec25d6e45b5d32887d1e693d0842ee2fa659d2"
+  end
+
+  resource "types-requests" do
+    url "https://files.pythonhosted.org/packages/19/1f/42dbf39ff88c67c71485e27485b1c3965ad882dc3b76c256f2d45401ffa8/types-requests-2.27.27.tar.gz"
+    sha256 "d618d9809fa32f514cf17cea8460814da671c56366fb1c908accca8bf183112b"
+  end
+
+  resource "types-urllib3" do
+    url "https://files.pythonhosted.org/packages/86/75/396edf6735c6531b3e4d5ecb382ea644ad28a601f8262f92279cc092110b/types-urllib3-1.26.14.tar.gz"
+    sha256 "2a2578e4b36341ccd240b00fccda9826988ff0589a44ba4a664bbd69ef348d27"
   end
 
   resource "tzdata" do
