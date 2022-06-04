@@ -8,11 +8,11 @@ class Csv2notion < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/csv2notion-0.2.0"
-    sha256 cellar: :any_skip_relocation, monterey:     "7238cce07afaaf3358bd9854e10ddba4bf4f4862c7ded17dff5bd9f55bc30f23"
-    sha256 cellar: :any_skip_relocation, big_sur:      "6d24c544235b7195694ebbb114f1f7a1f8d90c85b800ddeb57b5d7010a2b5b24"
-    sha256 cellar: :any_skip_relocation, catalina:     "14187375a71dfe49cdd8a324dd6da327ce597c0c548c38e3644f1f7ffec02a71"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "cdec7193c570cf2a58b8b920b4ed817da3f1d6911d2fb8545ee4d4e4e53a3cb1"
+    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/csv2notion-0.2.1"
+    sha256 cellar: :any_skip_relocation, monterey:     "1321bc9576e22f3e425275d41af31fdbfa35ae6ecc8738ff359a870cca35534c"
+    sha256 cellar: :any_skip_relocation, big_sur:      "24cb7e3e8c0081040afca3b6de638da5564094efb112c74f5132606321d72737"
+    sha256 cellar: :any_skip_relocation, catalina:     "c1b5d44d394a7c3c7c05823f82fb990a0fce6ccda0e1b6b4fda47e904db69ea0"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "79296946c92b972da913557962ba931c1f803a24131958901842a8ab1066e4ea"
   end
 
   depends_on "python@3.10"
