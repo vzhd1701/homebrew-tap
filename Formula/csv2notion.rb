@@ -3,8 +3,8 @@ class Csv2notion < Formula
 
   desc "Import/Merge CSV files into Notion database"
   homepage "https://github.com/vzhd1701/csv2notion"
-  url "https://files.pythonhosted.org/packages/3f/dd/d42741e997da64c6987b60ef07ed4299f1e2f16853b2b7e5a2963e212950/csv2notion-0.2.0.tar.gz"
-  sha256 "d971df6326c90a44787a56b5037a1320cb1905eb80b6e9268b8837c95de5afb1"
+  url "https://files.pythonhosted.org/packages/5a/48/945fc0c9618a10e08ced90b32ebef916c7108bf55eb410e37082007e0d96/csv2notion-0.2.1.tar.gz"
+  sha256 "b7b87421c7b35b6309aedd10633b85b685a2b1ad7cc58f87f1a81fdbb951964c"
   license "MIT"
 
   bottle do
@@ -63,8 +63,8 @@ class Csv2notion < Formula
   end
 
   resource "notion-vzhd1701-fork" do
-    url "https://files.pythonhosted.org/packages/fb/08/ecef29696b86725c51b765043567b8875af3ea6297e5444ec72a205c2671/notion-vzhd1701-fork-0.0.33.tar.gz"
-    sha256 "e1762688259bd010752bceda29dfdc15ae25cc7346eb0ddabd86208e36dfbc3e"
+    url "https://files.pythonhosted.org/packages/1b/92/47556d341bd7a3c5b51e3ca5cdddada22d9f04bc21d0dbb5ec3fe13c5857/notion-vzhd1701-fork-0.0.34.tar.gz"
+    sha256 "0763a4c7fb1f7c72146d088d0c898f66fabfca5b8424a59c0767d0b3ebca145c"
   end
 
   resource "python-dateutil" do
@@ -113,18 +113,18 @@ class Csv2notion < Formula
   end
 
   resource "types-python-dateutil" do
-    url "https://files.pythonhosted.org/packages/28/cd/2f094758ff9ee4ad820fc20b37e89908c0ff9fd541d066c1afa5a47acf2e/types-python-dateutil-2.8.16.tar.gz"
-    sha256 "3aaac4c138eb6b8ecbc2550996ec25d6e45b5d32887d1e693d0842ee2fa659d2"
+    url "https://files.pythonhosted.org/packages/ea/43/f675eb9c13cb784ee18f44b99a9ec5ee73aa4d1a6aff230699c7fc76ad03/types-python-dateutil-2.8.17.tar.gz"
+    sha256 "6c54265a221681dd87f61df6743bd5eab060cf1b4086ff65c1a8fd763ed6370e"
   end
 
   resource "types-requests" do
-    url "https://files.pythonhosted.org/packages/19/1f/42dbf39ff88c67c71485e27485b1c3965ad882dc3b76c256f2d45401ffa8/types-requests-2.27.27.tar.gz"
-    sha256 "d618d9809fa32f514cf17cea8460814da671c56366fb1c908accca8bf183112b"
+    url "https://files.pythonhosted.org/packages/8d/db/ad7df75037a21110deb624dae27b4868e881488f9e5411029a87536c0385/types-requests-2.27.30.tar.gz"
+    sha256 "ca8d7cc549c3d10dbcb3c69c1b53e3ffd1270089c1001a65c1e9e1017eb5e704"
   end
 
   resource "types-urllib3" do
-    url "https://files.pythonhosted.org/packages/86/75/396edf6735c6531b3e4d5ecb382ea644ad28a601f8262f92279cc092110b/types-urllib3-1.26.14.tar.gz"
-    sha256 "2a2578e4b36341ccd240b00fccda9826988ff0589a44ba4a664bbd69ef348d27"
+    url "https://files.pythonhosted.org/packages/0f/a4/fb3ae6c8c5440225b7ee3f9cc0a6d38b79b953862931b5f6f7281f3850e0/types-urllib3-1.26.15.tar.gz"
+    sha256 "c89283541ef92e344b7f59f83ea9b5a295b16366ceee3f25ecfc5593c79f794e"
   end
 
   resource "tzdata" do
