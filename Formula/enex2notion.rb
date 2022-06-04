@@ -3,8 +3,8 @@ class Enex2notion < Formula
 
   desc "Import Evernote ENEX files to Notion"
   homepage "https://github.com/vzhd1701/enex2notion"
-  url "https://files.pythonhosted.org/packages/32/93/4f6832a54db5075c2f74a72b56e67595d032097ec48279eec20177ecc5d1/enex2notion-0.2.13.tar.gz"
-  sha256 "bf699e83c373f184785d85d567cfed9fb7f3259b2477d522e92c5d77abfd78d3"
+  url "https://files.pythonhosted.org/packages/ea/06/354ff15933bd7475b44d3a81125c2d1128183ecbe38ab74271d477ecbc30/enex2notion-0.2.14.tar.gz"
+  sha256 "182a6d2c5ecdd1e236769c6be434a9bbb8fc9d2fee375fc1b3e1515bb2791b8c"
   license "MIT"
 
   bottle do
@@ -61,8 +61,8 @@ class Enex2notion < Formula
   end
 
   resource "notion-vzhd1701-fork" do
-    url "https://files.pythonhosted.org/packages/31/04/adaea906d9566120b4109a2fcdc04beb792862129ee813233f563f149978/notion-vzhd1701-fork-0.0.30.tar.gz"
-    sha256 "78afcf39382c18b74b79bb6be99cc86f72a116368d9877d4a6a3cf56b87ca5e4"
+    url "https://files.pythonhosted.org/packages/1b/92/47556d341bd7a3c5b51e3ca5cdddada22d9f04bc21d0dbb5ec3fe13c5857/notion-vzhd1701-fork-0.0.34.tar.gz"
+    sha256 "0763a4c7fb1f7c72146d088d0c898f66fabfca5b8424a59c0767d0b3ebca145c"
   end
 
   resource "pdfkit" do
