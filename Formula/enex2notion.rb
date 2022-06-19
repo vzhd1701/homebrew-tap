@@ -15,9 +15,6 @@ class Enex2notion < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "1acdeccf2213e5e3011b60ebf02f5b4fbf153e049990744bd79bcee84fffb0f7"
   end
 
-  depends_on "freetype" => :build
-  depends_on "swig" => :build
-  depends_on "mupdf"
   depends_on "python@3.10"
 
   resource "beautifulsoup4" do
@@ -146,19 +143,6 @@ class Enex2notion < Formula
   end
 
   def install
-    if OS.linux?
-      pymupdf_dirs = {
-        include_dirs: [
-          Formula["mupdf"].include/"mupdf",
-          Formula["freetype2"].include/"freetype2",
-        ],
-        library_dirs: [lib],
-      }
-      (buildpath/"pymupdf_dirs.env").write(pymupdf_dirs.to_json)
-
-      ENV["PYMUPDF_DIRS"] = File.expand_path("pymupdf_dirs.env")
-    end
-
     virtualenv_install_with_resources
   end
 
