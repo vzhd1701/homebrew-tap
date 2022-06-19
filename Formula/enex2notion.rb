@@ -17,7 +17,7 @@ class Enex2notion < Formula
 
   depends_on "freetype" => :build
   depends_on "swig" => :build
-  depends_on "mupdf"
+  depends_on "mupdf@1.19"
   depends_on "python@3.10"
 
   resource "beautifulsoup4" do
