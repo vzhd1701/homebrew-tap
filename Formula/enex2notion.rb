@@ -3,8 +3,8 @@ class Enex2notion < Formula
 
   desc "Import Evernote ENEX files to Notion"
   homepage "https://github.com/vzhd1701/enex2notion"
-  url "https://files.pythonhosted.org/packages/db/f2/8577936443a74d339c95732b941d7ff80a35589f313ed4b18eb51fab6b26/enex2notion-0.2.15.tar.gz"
-  sha256 "f7ccd9bb5061fea05beed7adad2b97f435d8dd7ac182272bb9a47cbfda5c25f6"
+  url "https://files.pythonhosted.org/packages/55/13/117278bc38604deef1b61861f1575fbc306c3d92aa70c7637b83fcd2bda7/enex2notion-0.2.16.tar.gz"
+  sha256 "42ed94fcb6c09571a9a1c4d4a98467ba6ef8797487d5dded29c476c12a51f2c3"
   license "MIT"
 
   bottle do
@@ -19,6 +19,14 @@ class Enex2notion < Formula
   depends_on "swig" => :build
   depends_on "mupdf"
   depends_on "python@3.10"
+
+  on_linux do
+    depends_on "harfbuzz"
+    depends_on "mujs"
+    depends_on "openjpeg"
+    depends_on "gumbo-parser"
+    depends_on "jbig2dec"
+  end
 
   resource "beautifulsoup4" do
     url "https://files.pythonhosted.org/packages/e8/b0/cd2b968000577ec5ce6c741a54d846dfa402372369b8b6861720aa9ecea7/beautifulsoup4-4.11.1.tar.gz"
@@ -36,8 +44,8 @@ class Enex2notion < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
+    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
   end
 
   resource "charset-normalizer" do
@@ -71,8 +79,8 @@ class Enex2notion < Formula
   end
 
   resource "PyMuPDF" do
-    url "https://files.pythonhosted.org/packages/9f/1d/032d24e0c774e67742395fda163a172c60e4d0f9875785d5199eb2956d5e/PyMuPDF-1.19.6.tar.gz"
-    sha256 "ef3d13e27f1585d776f6a2597f113aabd28d36b648b983a72850b21c5399ab08"
+    url "https://files.pythonhosted.org/packages/19/2d/73cb79152442ace5a6f55de17755e7c4c0dbed5ac6180baa1767d6a0e279/PyMuPDF-1.20.0.tar.gz"
+    sha256 "443675ed28dc9be5c9521e17ff9a20299a78b8b94f4c457d7b7aa81899c00ee7"
   end
 
   resource "python-dateutil" do
@@ -155,11 +163,19 @@ class Enex2notion < Formula
         library_dirs: [lib],
       }
       (buildpath/"pymupdf_dirs.env").write(pymupdf_dirs.to_json)
-
       ENV["PYMUPDF_DIRS"] = File.expand_path("pymupdf_dirs.env")
     end
 
-    virtualenv_install_with_resources
+    ENV["PYMUPDF_SETUP_MUPDF_BUILD"] = ""
+
+    venv = virtualenv_create(libexec, "python3")
+
+    resource("PyMuPDF").stage do
+      system libexec/"bin/python3", *Language::Python.setup_install_args(libexec), "build"
+    end
+
+    venv.pip_install resources.reject { |r| r.name == "PyMuPDF" }
+    venv.pip_install_and_link buildpath
   end
 
   test do
