@@ -5,6 +5,14 @@ class Pymupdf < Formula
   sha256 "443675ed28dc9be5c9521e17ff9a20299a78b8b94f4c457d7b7aa81899c00ee7"
   license "AGPL-3.0-only"
 
+  bottle do
+    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/pymupdf-1.20.0"
+    sha256 cellar: :any, monterey:     "bba89a10866bd95e131c603ceed7b9cf1e797dd9cbc81ff5a6d65c076de96880"
+    sha256 cellar: :any, big_sur:      "b698cafd8fc716bf2630e4963704c1560c251161bafe469f862523c6a018c034"
+    sha256 cellar: :any, catalina:     "8af86659e37132c04e965da3c6625fab1f9ceadc41bf7039184fd7c599c595fe"
+    sha256               x86_64_linux: "73e2e7d8da73851b872428fe625833ec4515016b68ac6617a5bc4f400923704c"
+  end
+
   depends_on "freetype" => :build
   depends_on "swig" => :build
 
