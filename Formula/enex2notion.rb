@@ -8,11 +8,11 @@ class Enex2notion < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/enex2notion-0.2.15"
-    sha256 cellar: :any,                 monterey:     "929d906ff8d4b62373f06b7d590a06adadde56f731ad07167d018805a2646a17"
-    sha256 cellar: :any,                 big_sur:      "544613b474b6585b05eff1387a727a7351a694c906951e79af683758269925ac"
-    sha256 cellar: :any,                 catalina:     "37c2be4195d1759947adbc6308525a0a72a8c9820d97d40bb661e5e73b6ae8b5"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "1acdeccf2213e5e3011b60ebf02f5b4fbf153e049990744bd79bcee84fffb0f7"
+    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/enex2notion-0.2.16"
+    sha256 cellar: :any,                 monterey:     "9ad4f0231569a4b3ff39232d34177889a31398fe04bc0656cc57260b4a3233e6"
+    sha256 cellar: :any,                 big_sur:      "a8463ba0745f3952fc22f4ee6f609479e5ef14b12d296eb14edca7f2fb3704a1"
+    sha256 cellar: :any,                 catalina:     "dd44fda96dd334f385e5f0b7da7b6400920f1832485fea365f6f106b57dcf5a9"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "2bf09661eacf2729bde4237afe39eac673b3ddb0e3926b60969f31bee0558997"
   end
 
   depends_on "freetype" => :build
