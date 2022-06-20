@@ -3,7 +3,7 @@ class Pymupdf < Formula
   homepage "https://github.com/pymupdf/PyMuPDF"
   url "https://files.pythonhosted.org/packages/19/2d/73cb79152442ace5a6f55de17755e7c4c0dbed5ac6180baa1767d6a0e279/PyMuPDF-1.20.0.tar.gz"
   sha256 "443675ed28dc9be5c9521e17ff9a20299a78b8b94f4c457d7b7aa81899c00ee7"
-  license "AGPL-3.0"
+  license "AGPL-3.0-only"
 
   depends_on "freetype" => :build
   depends_on "swig" => :build
