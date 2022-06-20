@@ -12,9 +12,17 @@ class Testmupdf < Formula
   depends_on "mupdf"
   depends_on "python@3.10"
 
+  on_linux do
+    depends_on "mujs" => :build
+    depends_on "jbig2dec" => :build
+    depends_on "openjpeg" => :build
+    depends_on "gumbo-parser" => :build
+    depends_on "harfbuzz" => :build
+  end
+
   resource "PyMuPDF" do
-    url "https://files.pythonhosted.org/packages/9f/1d/032d24e0c774e67742395fda163a172c60e4d0f9875785d5199eb2956d5e/PyMuPDF-1.19.6.tar.gz"
-    sha256 "ef3d13e27f1585d776f6a2597f113aabd28d36b648b983a72850b21c5399ab08"
+    url "https://files.pythonhosted.org/packages/19/2d/73cb79152442ace5a6f55de17755e7c4c0dbed5ac6180baa1767d6a0e279/PyMuPDF-1.20.0.tar.gz"
+    sha256 "443675ed28dc9be5c9521e17ff9a20299a78b8b94f4c457d7b7aa81899c00ee7"
   end
 
   def install
@@ -27,11 +35,19 @@ class Testmupdf < Formula
         library_dirs: [lib],
       }
       (buildpath/"pymupdf_dirs.env").write(pymupdf_dirs.to_json)
-
       ENV["PYMUPDF_DIRS"] = File.expand_path("pymupdf_dirs.env")
     end
 
-    virtualenv_install_with_resources
+    ENV["PYMUPDF_SETUP_MUPDF_BUILD"] = ""
+
+    venv = virtualenv_create(libexec, "python3")
+
+    resource("PyMuPDF").stage do
+      system libexec/"bin/python3", *Language::Python.setup_install_args(libexec), "build"
+    end
+
+    venv.pip_install resources.reject { |r| r.name == "PyMuPDF" }
+    venv.pip_install_and_link buildpath
   end
 
   test do
