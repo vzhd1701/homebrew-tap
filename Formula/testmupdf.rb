@@ -14,10 +14,10 @@ class Testmupdf < Formula
 
   on_linux do
     depends_on "mujs" => :build
-    depends_on "jbig2dec" => :build
     depends_on "openjpeg" => :build
     depends_on "gumbo-parser" => :build
     depends_on "harfbuzz" => :build
+    depends_on "jbig2dec"
   end
 
   resource "PyMuPDF" do
