@@ -13,7 +13,7 @@ class Testmupdf < Formula
   depends_on "python@3.10"
 
   on_linux do
-    depends_on "harfbuzz" => :build
+    depends_on "harfbuzz"
     depends_on "mujs"
     depends_on "openjpeg"
     depends_on "gumbo-parser"
