@@ -1,23 +1,15 @@
 class Pymupdf < Formula
   desc "Python bindings for the PDF toolkit and renderer MuPDF"
   homepage "https://github.com/pymupdf/PyMuPDF"
-  url "https://files.pythonhosted.org/packages/19/2d/73cb79152442ace5a6f55de17755e7c4c0dbed5ac6180baa1767d6a0e279/PyMuPDF-1.20.0.tar.gz"
-  sha256 "443675ed28dc9be5c9521e17ff9a20299a78b8b94f4c457d7b7aa81899c00ee7"
+  url "https://files.pythonhosted.org/packages/29/e4/d1d88146ef0b3b97d785acc7aed22b9774ac6bcf137e98b48a9c9bbb7f35/PyMuPDF-1.20.1.tar.gz"
+  sha256 "305c1a64b8fb2fd465e27cc8bdcbf0f64224f0ec6d7763e3f5f2ca6783136649"
   license "AGPL-3.0-only"
-
-  bottle do
-    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/pymupdf-1.20.0"
-    sha256 cellar: :any, monterey:     "bba89a10866bd95e131c603ceed7b9cf1e797dd9cbc81ff5a6d65c076de96880"
-    sha256 cellar: :any, big_sur:      "b698cafd8fc716bf2630e4963704c1560c251161bafe469f862523c6a018c034"
-    sha256 cellar: :any, catalina:     "8af86659e37132c04e965da3c6625fab1f9ceadc41bf7039184fd7c599c595fe"
-    sha256               x86_64_linux: "73e2e7d8da73851b872428fe625833ec4515016b68ac6617a5bc4f400923704c"
-  end
 
   depends_on "freetype" => :build
   depends_on "swig" => :build
 
   depends_on "mupdf"
-  depends_on "python@3.9"
+  depends_on "python@3.10"
 
   on_linux do
     depends_on "mujs"
@@ -37,15 +29,40 @@ class Pymupdf < Formula
         library_dirs: [lib],
       }
       (buildpath/"pymupdf_dirs.env").write(pymupdf_dirs.to_json)
-      ENV["PYMUPDF_DIRS"] = File.expand_path("pymupdf_dirs.env")
+
+      # https://github.com/pymupdf/PyMuPDF/blob/1.20.0/setup.py#L630
+      ENV["PYMUPDF_DIRS"] = (buildpath/"pymupdf_dirs.env").to_s
     end
 
+    # Makes setup skip build stage for mupdf
+    # https://github.com/pymupdf/PyMuPDF/blob/1.20.0/setup.py#L447
     ENV["PYMUPDF_SETUP_MUPDF_BUILD"] = ""
 
-    system Formula["python@3.9"].opt_bin/"python3", *Language::Python.setup_install_args(prefix), "build"
+    system Formula["python@3.10"].opt_bin/"python3", *Language::Python.setup_install_args(prefix), "build"
   end
 
   test do
-    system Formula["python@3.9"].opt_bin/"python3", "-c", "import fitz"
+    (testpath/"test.py").write <<~EOS
+      import sys
+      from pathlib import Path
+
+      import fitz
+
+      in_pdf = sys.argv[1]
+      out_png = sys.argv[2]
+
+      # Convert first page to PNG
+      pdf_doc = fitz.open(in_pdf)
+      pdf_page = pdf_doc.load_page(0)
+      png_bytes = pdf_page.get_pixmap().tobytes()
+
+      Path(out_png).write_bytes(png_bytes)
+    EOS
+
+    in_pdf = test_fixtures("test.pdf")
+    out_png = testpath/"test.png"
+
+    system Formula["python@3.10"].opt_bin/"python3", testpath/"test.py", in_pdf, out_png
+    assert_predicate out_png, :exist?
   end
 end
