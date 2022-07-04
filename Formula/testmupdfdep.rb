@@ -7,7 +7,7 @@ class Testmupdfdep < Formula
   sha256 "17517e2d3c260a1320bbbb0959d5a5d604f73f5c56bc689af1fc93cabeaba9d3"
   license "MIT"
 
-  depends_on "python@3.9"
+  depends_on "python@3.10"
   depends_on "vzhd1701/tap/pymupdf"
 
   def install
