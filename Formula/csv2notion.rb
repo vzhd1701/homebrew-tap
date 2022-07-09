@@ -3,8 +3,8 @@ class Csv2notion < Formula
 
   desc "Import/Merge CSV files into Notion database"
   homepage "https://github.com/vzhd1701/csv2notion"
-  url "https://files.pythonhosted.org/packages/5a/48/945fc0c9618a10e08ced90b32ebef916c7108bf55eb410e37082007e0d96/csv2notion-0.2.1.tar.gz"
-  sha256 "b7b87421c7b35b6309aedd10633b85b685a2b1ad7cc58f87f1a81fdbb951964c"
+  url "https://files.pythonhosted.org/packages/cd/d7/e3116ce907db3c90e1f7002ee1c133d9d959ea10f28296f2a80aca4d7c0c/csv2notion-0.3.0.tar.gz"
+  sha256 "382be4d9f05779bf2f881ab2153cdf5ad4803a006e89cba4de984118c4fc3409"
   license "MIT"
 
   bottle do
@@ -33,13 +33,13 @@ class Csv2notion < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/07/10/75277f313d13a2b74fc56e29239d5c840c2bf09f17bf25c02b35558812c6/certifi-2022.5.18.1.tar.gz"
-    sha256 "9c5705e395cd70084351dd8ad5c41e65655e08ce46f2ec9cf6c2c08390f71eb7"
+    url "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz"
+    sha256 "84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
-    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
+    url "https://files.pythonhosted.org/packages/93/1d/d9392056df6670ae2a29fcb04cfa5cee9f6fbde7311a1bb511d4115e9b7a/charset-normalizer-2.1.0.tar.gz"
+    sha256 "575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
   end
 
   resource "commonmark" do
@@ -83,8 +83,8 @@ class Csv2notion < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/60/f3/26ff3767f099b73e0efa138a9998da67890793bfa475d8278f84a30fec77/requests-2.27.1.tar.gz"
-    sha256 "68d7c56fd5a8999887728ef304a6d12edc7be74f1cfa47714fc8b414525c9a61"
+    url "https://files.pythonhosted.org/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
+    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
   end
 
   resource "six" do
@@ -108,23 +108,23 @@ class Csv2notion < Formula
   end
 
   resource "types-emoji" do
-    url "https://files.pythonhosted.org/packages/00/4d/3966fd0c7f4a8b24f9fdb7502115ec17b39c47b66131e3f9f1f0385deea1/types-emoji-1.7.0.tar.gz"
-    sha256 "bfdf677bed34537117a7d43687b09a01b808e4d838872f7628c6dc4d8a64131e"
+    url "https://files.pythonhosted.org/packages/9d/e8/27dbda1b66a8cce65fd89a14ca5adeb508455bc4333fccecc53ade676a01/types-emoji-1.7.2.tar.gz"
+    sha256 "a7660fb507b30cb80bcec2d01417d828f1258b9b2cd9fa80918e8e5470c5e037"
   end
 
   resource "types-python-dateutil" do
-    url "https://files.pythonhosted.org/packages/ea/43/f675eb9c13cb784ee18f44b99a9ec5ee73aa4d1a6aff230699c7fc76ad03/types-python-dateutil-2.8.17.tar.gz"
-    sha256 "6c54265a221681dd87f61df6743bd5eab060cf1b4086ff65c1a8fd763ed6370e"
+    url "https://files.pythonhosted.org/packages/44/47/731b6a362f4e563af57972c2699df759191f39c5b49ed056b3dd065bc495/types-python-dateutil-2.8.18.tar.gz"
+    sha256 "8695c7d7a5b1aef4002f3ab4e1247e23b1d41cd7cc1286d4594c2d8c5593c991"
   end
 
   resource "types-requests" do
-    url "https://files.pythonhosted.org/packages/8d/db/ad7df75037a21110deb624dae27b4868e881488f9e5411029a87536c0385/types-requests-2.27.30.tar.gz"
-    sha256 "ca8d7cc549c3d10dbcb3c69c1b53e3ffd1270089c1001a65c1e9e1017eb5e704"
+    url "https://files.pythonhosted.org/packages/e5/9a/c11348b69e80858799e943106e414a6780ebb98e87eaa1cd8ebe61d09579/types-requests-2.28.0.tar.gz"
+    sha256 "9863d16dfbb3fa55dcda64fa3b989e76e8859033b26c1e1623e30465cfe294d3"
   end
 
   resource "types-urllib3" do
-    url "https://files.pythonhosted.org/packages/0f/a4/fb3ae6c8c5440225b7ee3f9cc0a6d38b79b953862931b5f6f7281f3850e0/types-urllib3-1.26.15.tar.gz"
-    sha256 "c89283541ef92e344b7f59f83ea9b5a295b16366ceee3f25ecfc5593c79f794e"
+    url "https://files.pythonhosted.org/packages/7f/71/f6078ac156b931e70ab206fc84938697ca1f3a08510a2e08a683ba1b0317/types-urllib3-1.26.16.tar.gz"
+    sha256 "8bb3832c684c30cbed40b96e28bc04703becb2b97d82ac65ba4b968783453b0e"
   end
 
   resource "tzdata" do
@@ -138,8 +138,8 @@ class Csv2notion < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/1b/a5/4eab74853625505725cefdf168f48661b2cd04e7843ab836f3f63abf81da/urllib3-1.26.9.tar.gz"
-    sha256 "aabaf16477806a5e1dd19aa41f8c2b7950dd3c746362d7e3223dbe6de6ac448e"
+    url "https://files.pythonhosted.org/packages/25/36/f056e5f1389004cf886bb7a8514077f24224238a7534497c014a6b9ac770/urllib3-1.26.10.tar.gz"
+    sha256 "879ba4d1e89654d9769ce13121e0f94310ea32e8d2f8cf587b77c08bbcdb30d6"
   end
 
   def install
