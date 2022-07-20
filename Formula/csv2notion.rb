@@ -3,8 +3,8 @@ class Csv2notion < Formula
 
   desc "Import/Merge CSV files into Notion database"
   homepage "https://github.com/vzhd1701/csv2notion"
-  url "https://files.pythonhosted.org/packages/3e/4f/cdade8a82e6495405feb2669c72c229a71b04a02463883e5c2e2ee6ec0bb/csv2notion-0.3.1.tar.gz"
-  sha256 "ba629ab427610f8d546a8141ef6d1cee3d4ecc305edc4dfc6be5649c57d8ae54"
+  url "https://files.pythonhosted.org/packages/28/62/f17c2b57aa8abd55e1208296ba512af9e3229266e29024c16875d7664f74/csv2notion-0.3.2.tar.gz"
+  sha256 "6dda21ac7366c0e24fc5a892dee8f6ce2bf4e3982afeb0cfb3d185a0832d6b18"
   license "MIT"
 
   bottle do
@@ -108,18 +108,18 @@ class Csv2notion < Formula
   end
 
   resource "types-emoji" do
-    url "https://files.pythonhosted.org/packages/8b/45/824a8efce6d52d442d68cb5143886d59eda07661c4f82594f540fc862f0c/types-emoji-1.7.3.tar.gz"
-    sha256 "c8bcfb55940a8ce2055b56ba9d73f30cec61fec810dd0303c13f20da0024e62f"
+    url "https://files.pythonhosted.org/packages/15/4f/98cece0d20480586b225a515b6c83dd0e16b1b0502aa7fa89b67f86860e9/types-emoji-1.7.4.tar.gz"
+    sha256 "1e1341399ed1dd10a54d348ec7bb0708a56cd04f79702941fef5db60d276ea46"
   end
 
   resource "types-python-dateutil" do
-    url "https://files.pythonhosted.org/packages/44/47/731b6a362f4e563af57972c2699df759191f39c5b49ed056b3dd065bc495/types-python-dateutil-2.8.18.tar.gz"
-    sha256 "8695c7d7a5b1aef4002f3ab4e1247e23b1d41cd7cc1286d4594c2d8c5593c991"
+    url "https://files.pythonhosted.org/packages/0b/56/38212d626fb100026dbb79c050eb9ea24012ad562f8fd1991d25453da3d4/types-python-dateutil-2.8.19.tar.gz"
+    sha256 "bfd3eb39c7253aea4ba23b10f69b017d30b013662bb4be4ab48b20bbd763f309"
   end
 
   resource "types-requests" do
-    url "https://files.pythonhosted.org/packages/77/9e/19df5d6a6a646f7c7d8b8564664a36d777c905dd88a0c9a6521b868ec9b4/types-requests-2.28.1.tar.gz"
-    sha256 "acd8ed78509d27bdf04cddcc05f7066dfde4d30dd7dba67b808cdb1141d62ffe"
+    url "https://files.pythonhosted.org/packages/f0/16/b5df624c99f856b1671de918afa4737af3e5e623652fdf2a5b95aa3130fa/types-requests-2.28.2.tar.gz"
+    sha256 "398f88cd9302c796cb63d1021af2a1fb7ae507741a3d508edf8e0746d8c16a04"
   end
 
   resource "types-urllib3" do
