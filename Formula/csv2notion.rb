@@ -3,8 +3,8 @@ class Csv2notion < Formula
 
   desc "Import/Merge CSV files into Notion database"
   homepage "https://github.com/vzhd1701/csv2notion"
-  url "https://files.pythonhosted.org/packages/28/62/f17c2b57aa8abd55e1208296ba512af9e3229266e29024c16875d7664f74/csv2notion-0.3.2.tar.gz"
-  sha256 "6dda21ac7366c0e24fc5a892dee8f6ce2bf4e3982afeb0cfb3d185a0832d6b18"
+  url "https://files.pythonhosted.org/packages/e9/e9/fcc1c26074f8b4e7b82f7e13c7b955bffa92304ca58970bac25923fde709/csv2notion-0.3.3.tar.gz"
+  sha256 "e22f54d1b1cd17cba30f8c76e051a4731fc0942893fe799cfca664ab1e8e5f37"
   license "MIT"
 
   bottle do
@@ -53,8 +53,8 @@ class Csv2notion < Formula
   end
 
   resource "emoji" do
-    url "https://files.pythonhosted.org/packages/68/8a/b08dd0b946f0843cba782e3784cd979c33f144e5e7c37fb0162dc47acd43/emoji-1.7.0.tar.gz"
-    sha256 "65c54533ea3c78f30d0729288998715f418d7467de89ec258a31c0ce8660a1d1"
+    url "https://files.pythonhosted.org/packages/85/f3/0a09c327f81c792707727125e0b43e4eb6b1397f77d44162a8a5115260c0/emoji-2.0.0.tar.gz"
+    sha256 "297fac7ec9e86f7b602792c28eb6f04819ba67ab88a34c56afcde52243a9a105"
   end
 
   resource "idna" do
@@ -118,8 +118,8 @@ class Csv2notion < Formula
   end
 
   resource "types-requests" do
-    url "https://files.pythonhosted.org/packages/f0/16/b5df624c99f856b1671de918afa4737af3e5e623652fdf2a5b95aa3130fa/types-requests-2.28.2.tar.gz"
-    sha256 "398f88cd9302c796cb63d1021af2a1fb7ae507741a3d508edf8e0746d8c16a04"
+    url "https://files.pythonhosted.org/packages/0f/c8/3a78030054f2e851489ea910c5165e06f96ba2c12002082f355860c9c9ab/types-requests-2.28.3.tar.gz"
+    sha256 "fb9ea69311766967f9e91861211ec7449f6484025b766ea709689c0dbb29d7ba"
   end
 
   resource "types-urllib3" do
