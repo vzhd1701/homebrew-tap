@@ -9,11 +9,10 @@ class Enex2notion < Formula
   revision 1
 
   bottle do
-    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/enex2notion-0.2.17"
-    sha256 cellar: :any,                 monterey:     "442e54097df11fcc8ccc70e6e20eb5fad802809827beca829c6c83b615aac82b"
-    sha256 cellar: :any,                 big_sur:      "362a9a8c4e5ab898a0d6bb078f61bab251ee4d71f30e077fb8f5a798b2cf97a5"
-    sha256 cellar: :any,                 catalina:     "d2caddf303871e73edc0e0af306bf89adcba07667e1f787997c732d00e1e10e9"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "137c8ae462d8cd74b42cc7cee9ff26b830ab007b29f8aec57a14e9adaf851d14"
+    root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/enex2notion-0.2.17_1"
+    sha256 cellar: :any_skip_relocation, monterey: "966fb612a305b882dffe4ff5c7b6befee892c2a0d57b636dadfb72e1bed2a9e5"
+    sha256 cellar: :any_skip_relocation, big_sur:  "6a802711747fdcfc507894d26d3f903ed4a8c20a5ddffd84460434da8adb2071"
+    sha256 cellar: :any_skip_relocation, catalina: "b533119a182d48296eb2e757aad01bdf183bf1046a3858e1bcfa8ddc81181edd"
   end
 
   depends_on "python@3.10"
