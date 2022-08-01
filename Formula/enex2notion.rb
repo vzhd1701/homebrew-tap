@@ -6,6 +6,7 @@ class Enex2notion < Formula
   url "https://files.pythonhosted.org/packages/e4/0e/ad6b528f4d5597babae0fd0be145d321c34df4762932b622bacfccc42ef4/enex2notion-0.2.17.tar.gz"
   sha256 "8cddc157cd4f5999127584430cf173921b6846e91eb05585380158d64f63aed7"
   license "MIT"
+  revision 1
 
   bottle do
     root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/enex2notion-0.2.17"
@@ -15,18 +16,8 @@ class Enex2notion < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux: "137c8ae462d8cd74b42cc7cee9ff26b830ab007b29f8aec57a14e9adaf851d14"
   end
 
-  depends_on "freetype" => :build
-  depends_on "swig" => :build
-  depends_on "mupdf"
   depends_on "python@3.10"
-
-  on_linux do
-    depends_on "harfbuzz"
-    depends_on "mujs"
-    depends_on "openjpeg"
-    depends_on "gumbo-parser"
-    depends_on "jbig2dec"
-  end
+  depends_on "vzhd1701/tap/pymupdf"
 
   resource "beautifulsoup4" do
     url "https://files.pythonhosted.org/packages/e8/b0/cd2b968000577ec5ce6c741a54d846dfa402372369b8b6861720aa9ecea7/beautifulsoup4-4.11.1.tar.gz"
@@ -76,11 +67,6 @@ class Enex2notion < Formula
   resource "pdfkit" do
     url "https://files.pythonhosted.org/packages/58/bb/6ddc62b4622776a6514fd749041c2b4bccd343e006d00de590f8090ac8b1/pdfkit-1.0.0.tar.gz"
     sha256 "992f821e1e18fc8a0e701ecae24b51a2d598296a180caee0a24c0af181da02a9"
-  end
-
-  resource "PyMuPDF" do
-    url "https://files.pythonhosted.org/packages/29/e4/d1d88146ef0b3b97d785acc7aed22b9774ac6bcf137e98b48a9c9bbb7f35/PyMuPDF-1.20.1.tar.gz"
-    sha256 "305c1a64b8fb2fd465e27cc8bdcbf0f64224f0ec6d7763e3f5f2ca6783136649"
   end
 
   resource "python-dateutil" do
@@ -159,28 +145,7 @@ class Enex2notion < Formula
   end
 
   def install
-    if OS.linux?
-      pymupdf_dirs = {
-        include_dirs: [
-          Formula["mupdf"].include/"mupdf",
-          Formula["freetype2"].include/"freetype2",
-        ],
-        library_dirs: [lib],
-      }
-      (buildpath/"pymupdf_dirs.env").write(pymupdf_dirs.to_json)
-      ENV["PYMUPDF_DIRS"] = File.expand_path("pymupdf_dirs.env")
-    end
-
-    ENV["PYMUPDF_SETUP_MUPDF_BUILD"] = ""
-
-    venv = virtualenv_create(libexec, "python3")
-
-    resource("PyMuPDF").stage do
-      system libexec/"bin/python3", *Language::Python.setup_install_args(libexec), "build"
-    end
-
-    venv.pip_install resources.reject { |r| r.name == "PyMuPDF" }
-    venv.pip_install_and_link buildpath
+    virtualenv_install_with_resources
   end
 
   test do
