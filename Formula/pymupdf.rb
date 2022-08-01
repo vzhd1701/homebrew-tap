@@ -4,6 +4,7 @@ class Pymupdf < Formula
   url "https://files.pythonhosted.org/packages/29/e4/d1d88146ef0b3b97d785acc7aed22b9774ac6bcf137e98b48a9c9bbb7f35/PyMuPDF-1.20.1.tar.gz"
   sha256 "305c1a64b8fb2fd465e27cc8bdcbf0f64224f0ec6d7763e3f5f2ca6783136649"
   license "AGPL-3.0-only"
+  revision 1
 
   bottle do
     root_url "https://github.com/vzhd1701/homebrew-tap/releases/download/pymupdf-1.20.1"
@@ -29,25 +30,13 @@ class Pymupdf < Formula
 
   def install
     if OS.linux?
-      pymupdf_dirs = {
-        include_dirs: [
-          Formula["mupdf"].include/"mupdf",
-          Formula["freetype2"].include/"freetype2",
-        ],
-        library_dirs: [lib],
-      }
-      (buildpath/"pymupdf_dirs.env").write(pymupdf_dirs.to_json)
-
-      # https://github.com/pymupdf/PyMuPDF/blob/1.20.0/setup.py#L630
-      ENV["PYMUPDF_DIRS"] = (buildpath/"pymupdf_dirs.env").to_s
+      ENV.append "CPATH", Formula["mupdf"].include/"mupdf", ":"
+      ENV.append "CPATH", Formula["freetype2"].include/"freetype2", ":"
     end
 
     # Makes setup skip build stage for mupdf
     # https://github.com/pymupdf/PyMuPDF/blob/1.20.0/setup.py#L447
     ENV["PYMUPDF_SETUP_MUPDF_BUILD"] = ""
-
-    # Ensure `python` references use our python3
-    ENV.prepend_path "PATH", Formula["python@3.10"].opt_bin
 
     system "python3", *Language::Python.setup_install_args(prefix),
                       "--install-lib=#{prefix/Language::Python.site_packages("python3")}",
