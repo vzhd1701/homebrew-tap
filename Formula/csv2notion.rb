@@ -3,8 +3,8 @@ class Csv2notion < Formula
 
   desc "Import/Merge CSV files into Notion database"
   homepage "https://github.com/vzhd1701/csv2notion"
-  url "https://files.pythonhosted.org/packages/7e/79/acf3cca3035f7611f1b673dfe1319f2472cb015980797df5eae9975a3dee/csv2notion-0.3.4.tar.gz"
-  sha256 "9e1f674c46bf2beedc80c9d9ba70b53d92aec6d69a8645eaa834541bfaecf7b7"
+  url "https://files.pythonhosted.org/packages/59/df/27dfedb312835b49f27b06681e4e71d1f42a71d1128431ecb21de532ba8b/csv2notion-0.3.5.tar.gz"
+  sha256 "134a202fd7553e58407ac913fb0d6f920079e326cc58b9c30fed27ed63049a80"
   license "MIT"
 
   bottle do
@@ -37,8 +37,8 @@ class Csv2notion < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/93/1d/d9392056df6670ae2a29fcb04cfa5cee9f6fbde7311a1bb511d4115e9b7a/charset-normalizer-2.1.0.tar.gz"
-    sha256 "575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
+    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
+    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
   end
 
   resource "commonmark" do
@@ -122,18 +122,18 @@ class Csv2notion < Formula
   end
 
   resource "types-requests" do
-    url "https://files.pythonhosted.org/packages/68/09/4241bef81461b4a283e723ca39f580ff4a0cfbec434a4b07570822d14cc8/types-requests-2.28.6.tar.gz"
-    sha256 "cf3383bbd79394bf051a0a9202d6831fa962f186f923c178f7c059e3424bd00e"
+    url "https://files.pythonhosted.org/packages/05/7d/87a523c17e941626a3eebf397a3ce669c258ff31b1b992f5b11c365ee25f/types-requests-2.28.9.tar.gz"
+    sha256 "feaf581bd580497a47fe845d506fa3b91b484cf706ff27774e87659837de9962"
   end
 
   resource "types-urllib3" do
-    url "https://files.pythonhosted.org/packages/0d/97/4b60d05e19f673f7addc87ce72a61a530faf491d6011048f3e8a46545c01/types-urllib3-1.26.20.tar.gz"
-    sha256 "1fb6e2af519a7216a19dd6be8cd2ee787b402a754ccb4a13ca1c0e5b202aea5a"
+    url "https://files.pythonhosted.org/packages/4a/21/ddf7064ff4d10849ded229b2dabc9bfc5f19a7d4531ebf5c3b431267e603/types-urllib3-1.26.23.tar.gz"
+    sha256 "b78e819f0e350221d0689a5666162e467ba3910737bafda14b5c2c85e9bb1e56"
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/df/c7/2d8ea31840794fb341bc2c2ea72bf1bd16bd778bd8c0d7c9e1e5f9df1de3/tzdata-2022.1.tar.gz"
-    sha256 "8b536a8ec63dc0751342b3984193a3118f8fca2afe25752bb9b7fffd398552d3"
+    url "https://files.pythonhosted.org/packages/3e/eb/a00286433c739bb1a0d83a069b2dc379a5d14b0b9c927e3cb00cb434d740/tzdata-2022.2.tar.gz"
+    sha256 "21f4f0d7241572efa7f7a4fdabb052e61b55dc48274e6842697ccdf5253e5451"
   end
 
   resource "tzlocal" do
@@ -142,8 +142,8 @@ class Csv2notion < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/6d/d5/e8258b334c9eb8eb78e31be92ea0d5da83ddd9385dc967dd92737604d239/urllib3-1.26.11.tar.gz"
-    sha256 "ea6e8fb210b19d950fab93b60c9009226c63a28808bc8386e05301e25883ac0a"
+    url "https://files.pythonhosted.org/packages/b2/56/d87d6d3c4121c0bcec116919350ca05dc3afd2eeb7dc88d07e8083f8ea94/urllib3-1.26.12.tar.gz"
+    sha256 "3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e"
   end
 
   def install
